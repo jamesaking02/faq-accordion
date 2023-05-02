@@ -40,7 +40,7 @@ main {
   background-repeat: no-repeat;
   background-size: 20em;
   background-position: top center ;
-  padding: 0em 1em 4em 1em;
+  padding: 0em 2em 4em 2em;
   border-radius: 2em;
 }
 
@@ -59,8 +59,45 @@ main {
   margin-top: -1em;
 }
 
+.accordion {
+  display: grid;
+  grid-template: auto / auto .1fr;
+  place-items: center left;
+  padding-bottom: 1em;
+}
+
 .acc__button {
   background-color: transparent;
   border: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  /* white-space: nowrap; */
+}
+
+.acc__button:hover {
+  cursor: pointer;
+  color: var(--Soft-red);
+}
+
+.acc__button--bold {
+  font-weight: 700;
+}
+
+.acc__img {
+  place-self: center;
+}
+
+.acc__img--flip {
+  transform: rotate(180deg);
+}
+
+.active {
+  display: block;
+  margin-top: 1em;
+  padding-left: 0.2em;
+  font-size: 0.85rem;
+  color: var(--Dark-grayish-blue);
+}
+
+hr {
+  border: 1px solid var(--Light-grayish-blue);
 }
