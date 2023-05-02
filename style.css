@@ -13,15 +13,50 @@
 
 * {box-sizing: border-box;}
 
+.acc__paragraph {
+  display: none;
+}
+
+html {
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  background-repeat: no-repeat;
+  /* width: 100%; */
+}
+
 html body {
   font-size: 75%;
   font-family: 'Kumbh Sans', sans-serif;
-  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  min-height: 100vh;
+  
+}
+
+main {
+  padding: 10em 2em 4em 2em;
+}
+
+.container {
+  background-color: white;
+  background-image: url(./images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
+  background-size: 20em;
+  background-position: top center ;
+  padding: 0em 1em 4em 1em;
+  border-radius: 2em;
+}
+
+.container__img {
+  width: 20em;
+  margin: auto;
+  display: block;
+  /* transform: translateY(-17vh); */
+  transform: translateY(-60%);
 }
 
 .heading {
   font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: -1em;
 }
 
 .acc__button {
