@@ -78,7 +78,7 @@ main {
   color: var(--Soft-red);
 }
 
-.acc__button--bold {
+.acc__button--bold { /*class to be toggle*/
   font-weight: 700;
 }
 
@@ -86,15 +86,15 @@ main {
   place-self: center;
 }
 
-.acc__img--flip {
+.acc__img--flip { /*class to be toggle*/
   transform: rotate(180deg);
 }
 
-.active {
+.active { /*class to be toggle*/
   display: block;
   margin-top: 1em;
   padding-left: 0.2em;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--Dark-grayish-blue);
 }
 
