@@ -28,9 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop screenshot](./images/FAQ-Accordion-Card-desktop.png.jpg)
+![desktop screenshot](./images/FAQ-Accordion-Card-desktop.png)
 
-![mobile screenshot](./images/FAQ-Accordion-Card-mobile.png.jpg)
+![mobile screenshot](./images/FAQ-Accordion-Card-mobile.png)
 
 ### Links
 
