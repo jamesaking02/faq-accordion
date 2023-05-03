@@ -1,35 +1,29 @@
 
-const accordion = document.getElementsByClassName('acc__button')
-const acc__p = document.getElementsByClassName('acc__paragraph')
-const downArrow = document.getElementsByClassName('acc__img')
+const acc = document.getElementsByClassName('acc__button')
+let i
 
-accordion[0].addEventListener('click', function(){
-  accordion[0].classList.toggle('acc__button--bold')
-  downArrow[0].classList.toggle('acc__img--flip')
-  acc__p[0].classList.toggle('active')
-})
+for (i = 0; i < acc.length; i++) {//looping through the classList of acc__button
+  acc[i].addEventListener('click', function(){
+    let content = this.nextElementSibling
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null
+    } else {
+      let active = document.querySelectorAll('.active', 'acc__button--active')
+      for (let j = 0; j < active.length; j++) {
+        active[j].classList.remove('active', 'acc__button--active')
+        active[j].nextElementSibling.style.maxHeight = null
+      }
+      this.classList.toggle('active')
+      content.style.maxHeight = content.scrollHeight + "px"
+    }
+    if (this.classList.contains('acc__button--active')){
+      this.classList.remove('acc__button--active')
+      this.classList.add('acc__button--inactive')
+    } else {
+      this.classList.remove('acc__button--inactive')
+      this.classList.toggle('acc__button--active')
 
-accordion[1].addEventListener('click', function(){
-  accordion[1].classList.toggle('acc__button--bold')
-  downArrow[1].classList.toggle('acc__img--flip')
-  acc__p[1].classList.toggle('active')
-})
-
-accordion[2].addEventListener('click', function(){
-  accordion[2].classList.toggle('acc__button--bold')
-  downArrow[2].classList.toggle('acc__img--flip')
-  acc__p[2].classList.toggle('active')
-})
-
-accordion[3].addEventListener('click', function(){
-  accordion[3].classList.toggle('acc__button--bold')
-  downArrow[3].classList.toggle('acc__img--flip')
-  acc__p[3].classList.toggle('active')
-})
-
-accordion[4].addEventListener('click', function(){
-  accordion[4].classList.toggle('acc__button--bold')
-  downArrow[4].classList.toggle('acc__img--flip')
-  acc__p[4].classList.toggle('active')
-})
+    }
+  })
+}
 
