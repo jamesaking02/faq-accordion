@@ -13,14 +13,10 @@
 
 * {box-sizing: border-box;}
 
-.acc__paragraph {
-  display: none;
-}
 
 html {
   background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
   background-repeat: no-repeat;
-  /* width: 100%; */
 }
 
 html body {
@@ -49,7 +45,6 @@ main {
   width: 20em;
   margin: auto;
   display: block;
-  /* transform: translateY(-17vh); */
   transform: translateY(-60%);
 }
 
@@ -65,17 +60,22 @@ main {
 }
 
 .accordion {
-  display: grid;
-  grid-template: auto / auto .1fr;
-  place-items: center left;
   padding-bottom: 1em;
 }
 
 .acc__button {
+  display: flex;
+  justify-content: space-between;
   background-color: transparent;
   border: none;
   font-size: 0.8rem;
-  /* white-space: nowrap; */
+  text-align: left;
+  width: 100%;
+}
+
+.acc__button::after {
+  content: url(./images/icon-arrow-down.svg);
+  transition: all 0.5s ease;
 }
 
 .acc__button:hover {
@@ -83,24 +83,26 @@ main {
   color: var(--Soft-red);
 }
 
-.acc__button--bold { /*class to be toggle*/
+.acc__button--active { /*class to be toggle*/
   font-weight: 700;
 }
 
-.acc__img {
-  place-self: center;
+.acc__button--inactive {/*class to be added/removed*/
+  font-weight: 400;
 }
 
-.acc__img--flip { /*class to be toggle*/
+.acc__button--active::after {
   transform: rotate(180deg);
 }
 
-.active { /*class to be toggle*/
-  display: block;
-  margin-top: 1em;
+.acc__content {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0.5em;
   padding-left: 0.2em;
   font-size: 0.8rem;
   color: var(--Dark-grayish-blue);
+  transition: max-height 0.3s ease-out;
 }
 
 hr {
@@ -125,14 +127,6 @@ hr {
     transform: translate(-135%, 45%);
     width: 140px;
   }
-
-  /* .container__img--box {
-    display: block;
-    width: 15em;
-    position: absolute;
-    top: 50vh;
-    left: -5vw;
-  } */
 
   .container__img {
     display: none;
