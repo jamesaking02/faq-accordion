@@ -27,7 +27,12 @@ html body {
 }
 
 main {
-  padding: 10em 1.5em 10em 1.5em;
+  padding: 13em 1.5em 0em 1.5em;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6em;
 }
 
 .container {
@@ -156,6 +161,10 @@ hr {
 
   .acc__button {
     font-size: 0.9rem;
+  }
+
+  .attribution {
+    display: none;
   }
 }
 
