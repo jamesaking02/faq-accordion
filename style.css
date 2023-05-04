@@ -22,12 +22,12 @@ html {
 html body {
   font-size: 75%;
   font-family: 'Kumbh Sans', sans-serif;
+  width: 100%;
   min-height: 100vh;
-  
 }
 
 main {
-  padding: 10em 2em 10em 2em;
+  padding: 10em 1.5em 10em 1.5em;
 }
 
 .container {
@@ -109,10 +109,19 @@ hr {
   border: 1px solid var(--Light-grayish-blue);
 }
 
-@media only screen and (width > 770px) {
+@media only screen and (width > 820px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+  }
+
   .container {
     display: flex;
-    width: 70em;
+    justify-content: center;
+    align-self: center;
+    width: 65em;
     padding: 8em;
     background-image: url(./images/illustration-woman-online-desktop.svg),
     url(./images/bg-pattern-desktop.svg);
@@ -137,18 +146,22 @@ hr {
   }
 
   .accordion {
-    width: 25em;
+    width: 20em;
   }
 
   .heading {
     text-align: left;
     margin-bottom: 1.5em;
   }
+
+  .acc__button {
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (width > 900px) {
   .container {
-    margin: auto;
+    /* margin: auto; */
     width: 75em;
     background-position: -4vw 6vh, -12vw -7vh;
   }
@@ -157,7 +170,7 @@ hr {
     transform: translate(43em, -13em);
   }
 
-  .acc__button {
-    font-size: 0.9rem;
+  .accordion {
+    width: 25em;
   }
 }
